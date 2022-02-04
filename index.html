@@ -8,9 +8,60 @@
     <script src="https://kit.fontawesome.com/bac16a29bd.js" crossorigin="anonymous"></script>
   <script defer src="bundle.js"></script></head>
   <body>
-    <aside></aside>
     <main>
-      <ul id="display-items"></ul>
+      <aside>
+        <div class="comments-box">
+          <h1>Pokemon<span id="count"></span></h1>
+          <h2 id="pokemon_name_title">Select a pokemon</h2>
+          <h4><span id="comment-title"> </span> <span id="nb-comments"></span></h4>
+          <ul class="pokemon-comments"></ul>
+        </div>
+      </aside>
+      <section>
+        <ul id="display-items"></ul>
+
+        <div class="load-more"><i class="fas fa-arrow-circle-down" id="load-more"></i></div>
+
+        <!-- POPUP -->
+        <div class="popup-parent">
+          <div class="popup-modal popup-hidden">
+            <div class="popup-close">
+              <i class="fas fa-times"></i>
+            </div>
+            <div class="popup-datas">
+              <div class="popup-pokemon">
+                <div class="popup-image">
+                  <h3 class="pokemon_name" id="pokemon_name">${pokemon_name}</h3>
+                  <img class="pokemon-image" id="pokemon_image" src="#" alt="pokemon picture" />
+                </div>
+
+                <ul class="pokemon-characteristics">
+                  <li><span id="pokemon_height"></span><i class="fas fa-text-height"></i></li>
+                  <li><span id="pokemon_weight"></span><i class="fas fa-weight"></i></li>
+                  <li><span>22</span><i class="fas fa-dumbbell"></i></li>
+                  <li><span>98</span><i class="fas fa-battery-full"></i></li>
+                  <li><span>56</span><i class="fas fa-briefcase"></i></li>
+                  <li><span>87</span><i class="fas fa-cookie"></i></li>
+                  <li><span>2</span><i class="fab fa-creative-commons-sampling"></i></li>
+                </ul>
+              </div>
+
+              <div class="add-comment-form">
+                <small></small>
+                <form id="add-comment">
+                  <small></small>
+                  <input type="hidden" name="idPokemon" id="idPokemon" />
+                  <input name="username" placeholder="Your name" />
+                  <input name="comment" placeholder="Your comment" />
+                  <button type="submit">Comment</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END POPUP -->
+      </section>
     </main>
   </body>
 </html>
