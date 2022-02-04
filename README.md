@@ -1,10 +1,15 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Pokemon
 
 This is an app that displays pokemons using a remote API.
 
-![screenshot](./assets/screen1.png)
+![screenshot](./assets/pokemon.gif)
+
+<img src="./assets/screen1.png" width="300">
+<img src="./assets/screen2.png" width="300">
+<img src="./assets/screen3.png" width="300">
+<img src="./assets/screen4.png" width="300">
+<img src="./assets/screen5.png" width="300">
+
 
 This project shows pokemon characters.
 
@@ -19,13 +24,7 @@ This project shows pokemon characters.
 
 This project is deployed on a github page on the link below:
 
-- https://matovu-farid.github.io/pokemon/
-
-## Video Demo
-
-[Video](https://www.loom.com/share/2a3bc2add93044a0bc4735dd45d48b63)
-
-
+- https://jihaneh.github.io/pokemon/
 
 ## Getting Started
 
@@ -34,7 +33,7 @@ This project is deployed on a github page on the link below:
 To get the content of this project locally you need to run this command in your terminal:
 
 ```
-- git clone your https://github.com/matovu-farid/pokemon.git
+- git clone your https://github.com/jihaneH/pokemon.git
 - cd project pokemon
 - npm install
 - npm start
@@ -48,16 +47,17 @@ To get the content of this project locally you need to run this command in your 
 
 ## Author
 
+👤 **JihaneH**
+
+- GitHub: [@githubhandle](https://github.com/jihaneH)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
+
+
 👤 **Matovu Farid Nkoba**
 
 - GitHub: [@matovu-farid](https://github.com/matovu-farid)
 - Twitter: [@matovu100](https://twitter.com/matovu100)
 - LinkedIn: [matovu-farid](https://www.linkedin.com/in/matovu-farid-48b80257)
-
-👤 **JihaneH**
-
-- GitHub: [@githubhandle](https://github.com/jihaneH)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
 
 ## 📝 License
 

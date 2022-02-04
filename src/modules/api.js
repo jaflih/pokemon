@@ -3,13 +3,13 @@ export class Api {
 
   APP_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
-  APP_NAME ='Pokemon_Farid_Jihane'
+  APP_NAME = 'Pokemon_Farid_Jihane';
 
-  APP_ID = 'EtP7GW5T9AWxrJLgrSBm'
+  APP_ID = 'EtP7GW5T9AWxrJLgrSBm';
 
   COMMENT_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EtP7GW5T9AWxrJLgrSBm/comments';
 
-  POCKEMON_COUNT = 0
+  POCKEMON_COUNT = 0;
 
   #fetchPockemon = async (url) => {
     const result = {};
@@ -22,11 +22,16 @@ export class Api {
     return result;
   };
 
+  NB_POKEMON_LOAD = 20;
+
   getDisplayItems = async () => {
     const promises = [];
-    Array.from(Array(6).keys())
-      .forEach((i) => promises.push(this.getPokemonFromId(i + 1 + this.POCKEMON_COUNT)));
-    this.POCKEMON_COUNT += 6;
+    Array.from(Array(
+      this.NB_POKEMON_LOAD,
+    ).keys()).forEach(
+      (i) => promises.push(this.getPokemonFromId(i + 1 + this.POCKEMON_COUNT)),
+    );
+    this.POCKEMON_COUNT += this.NB_POKEMON_LOAD;
     const items = await Promise.all(promises);
     return items;
   };
@@ -41,9 +46,9 @@ export class Api {
     return this.#fetchDataArray(url);
   };
 
-  likeUrl =() => `${this.APP_URL}${this.APP_ID}/likes/`
+  likeUrl = () => `${this.APP_URL}${this.APP_ID}/likes/`;
 
-  #fetchDataArray=async (url) => {
+  #fetchDataArray = async (url) => {
     const response = await fetch(url);
     if ((response.status && response.status === 500) || response.status === 400) {
       return [];
@@ -51,7 +56,7 @@ export class Api {
 
     const data = await response.json();
     return data.error ? [] : data;
-  }
+  };
 
   getLikes = () => this.#fetchDataArray(this.likeUrl());
 
@@ -72,7 +77,7 @@ export class Api {
     });
     const text = await response.text();
     return text;
-  }
+  };
 
   registerNewApp = async () => {
     const response = await fetch(this.APP_URL, {

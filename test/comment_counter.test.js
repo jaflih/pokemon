@@ -3,7 +3,7 @@ import {
 } from '@jest/globals';
 import 'regenerator-runtime/runtime';
 import { Api } from '../src/modules/api.js';
-import { displayItems } from '../src/modules/display_list_items';
+import { displayItems } from '../src/modules/app';
 import '../src/modules/append_no_of_likes.js';
 
 jest.mock('../src/modules/api.js');

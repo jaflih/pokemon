@@ -1,6 +1,5 @@
 const appendNoOFLike = (id, likeNumber) => {
-  document.querySelector(`#likes-${id}`)
-    .innerHTML = `${likeNumber} likes`;
+  document.querySelector(`#likes-${id}`).innerHTML = `${likeNumber}`;
 };
 
 const appendNoOFLikes = (likesArray = []) => {
